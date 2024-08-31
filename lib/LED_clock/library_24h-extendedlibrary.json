@@ -1,5 +1,5 @@
 {
-    "name": "LED_Clock-DIY-machines",
+    "name": "LED_24h-Clock",
     "version": "1.0.0",
     "build": {
 		"srcFilter": [
@@ -7,12 +7,12 @@
             "+<Modules/*.cpp>",
             "+<Modules/**/*.cpp>",
             "+<Modules/**/*.c>",
-            "+<Config/Animations/diy-machines/*.c>",
-            "+<Config/Animations/diy-machines/*.cpp>",
+            "+<Config/Animations/24h-clock/*.c>",
+            "+<Config/Animations/24h-clock/*.cpp>",
             "+<Config/Blynk/default/*.c>",
             "+<Config/Blynk/default/*.cpp>",
-            "+<Config/Setup/diy-machines/*.c>",
-			"+<Config/Setup/diy-machines/*.cpp>",
+            "+<Config/Setup/24h-clock/*.c>",
+			"+<Config/Setup/24h-clock/*.cpp>",
             "+<Config/Transitions/default/*.c>",
             "+<Config/Transitions/default/*.cpp>"
 		],
@@ -22,9 +22,9 @@
             "-I Modules/DisplayManager/inc",
             "-I Modules/SevenSegment/inc",
             "-I Modules/TimeManager/inc",
-            "-I Config/Setup/diy-machines",
+            "-I Config/Setup/24h-clock",
             "-I Config/Blynk/default",
-            "-I Config/Animations/diy-machines",
+            "-I Config/Animations/24h-clock",
             "-I Config/Transitions/default"
 		]
 	}

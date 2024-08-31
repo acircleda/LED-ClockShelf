@@ -25,7 +25,7 @@
 	/**
 	 * \brief If you want Blynk functionality set this to true and set your authentication token. Otherwise set it to false
 	 */
-	#define IS_BLYNK_ACTIVE 		true
+	#define IS_BLYNK_ACTIVE 		false
 
 	#if IS_BLYNK_ACTIVE == true
 		/**
@@ -89,8 +89,8 @@
 		/**
 		 * \brief WIFI_SSID and WIFI_PW are only needed if smart setup is disabled
 		 */
-		#define WIFI_SSID	"SET_YOUR_SSID_HERE"
-		#define WIFI_PW		"SET_YOUR_PASSWORD_HERE"
+		#define WIFI_SSID	"WIFI_SSID"
+		#define WIFI_PW		"WIFI_PW"
 	#endif
 
 #endif
@@ -108,7 +108,7 @@
 /**
  * \brief Color of the internal LEDs, this will be the default color if blynk functionality is disabled
  */
-#define INTERNAL_COLOR						CRGB::Blue
+#define INTERNAL_COLOR						CRGB::White
 
 /**
  * \brief Color of the separation dot LEDs, this will be the default color if blynk functionality is disabled
@@ -148,7 +148,7 @@
 /**
  * \brief Enter the string for your timezone according to this webpage: https://remotemonitoringsystems.ca/time-zone-abbreviations.php
  */
-#define TIMEZONE_INFO "CET-1CEST-2,M3.5.0/02:00:00,M10.5.0/03:00:00"
+#define TIMEZONE_INFO "EST5EDT"
 
 /**
  * \brief Time in seconds for the interval in which the time should be synchronized with the time server
@@ -241,17 +241,17 @@
 /**
  * \brief Number of LEDs in each segment
  */
-#define NUM_LEDS_PER_SEGMENT	12
+#define NUM_LEDS_PER_SEGMENT	9
 
 /**
  * \brief If you wired the down lighter LEDs to the end of the LED strips set this to true
  */
-#define APPEND_DOWN_LIGHTERS	true
+#define APPEND_DOWN_LIGHTERS	false
 
 /**
  * \brief Number of LEDs For interior lights
  */
-#define ADDITIONAL_LEDS			12
+#define ADDITIONAL_LEDS			35
 
 /**
  * \brief Automatically calculated total number of LEDs used
@@ -346,7 +346,7 @@ enum DisplayIDs {
  * \brief Number of separation dots to use by default (or if no blynk functionality is available)
  * 		  allowed values are 1, 2 and 0 to turn it off
  */
-#define NUM_SEPARATION_DOTS	2
+#define NUM_SEPARATION_DOTS	0
 
 
 /***************************
@@ -358,7 +358,7 @@ enum DisplayIDs {
 /**
  * \brief Enable automatic brightness adjustments based on a light sensor
  */
-#define ENABLE_LIGHT_SENSOR			false
+#define ENABLE_LIGHT_SENSOR			true
 
 #if ENABLE_LIGHT_SENSOR == true
 	/**

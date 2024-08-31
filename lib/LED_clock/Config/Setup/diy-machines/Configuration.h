@@ -25,7 +25,7 @@
 	/**
 	 * \brief If you want Blynk functionality set this to true and set your authentication token. Otherwise set it to false
 	 */
-	#define IS_BLYNK_ACTIVE 		true
+	#define IS_BLYNK_ACTIVE 		false
 
 	#if IS_BLYNK_ACTIVE == true
 		/**
@@ -89,8 +89,8 @@
 		/**
 		 * \brief WIFI_SSID and WIFI_PW are only needed if smart setup is disabled
 		 */
-		#define WIFI_SSID	"SET_YOUR_SSID_HERE"
-		#define WIFI_PW		"SET_YOUR_PASSWORD_HERE"
+		#define WIFI_SSID	"WIFI_SSID"
+		#define WIFI_PW		"WIFI_PW"
 	#endif
 
 #endif
@@ -98,42 +98,42 @@
 /**
  * \brief Color of the hour segments, this will be the default color if blynk functionality is disabled
  */
-#define HOUR_COLOR							CRGB::White
+#define HOUR_COLOR							CRGB::Pink
 
 /**
  * \brief Color of the minute segments, this will be the default color if blynk functionality is disabled
  */
-#define MINUTE_COLOR						CRGB::Azure
+#define MINUTE_COLOR						CRGB::Blue
 
 /**
  * \brief Color of the internal LEDs, this will be the default color if blynk functionality is disabled
  */
-#define INTERNAL_COLOR						CRGB::Blue
+#define INTERNAL_COLOR						CRGB::White
 
 /**
  * \brief Color of the separation dot LEDs, this will be the default color if blynk functionality is disabled
  */
-#define SEPARATION_DOT_COLOR				CRGB::Blue
+#define SEPARATION_DOT_COLOR				CRGB::Black
 
 /**
  * \brief Color of the LEDs for the OTA update progress bar
  */
-#define OTA_UPDATE_COLOR					CRGB::Orange
+#define OTA_UPDATE_COLOR					CRGB::Green
 
 /**
  * \brief Color of the LEDs while searching for a WIFI network
  */
-#define WIFI_CONNECTING_COLOR				CRGB::Blue
+#define WIFI_CONNECTING_COLOR				CRGB::Azure
 
 /**
  * \brief Color of the LEDs signaling a successful WIFI connection
  */
-#define WIFI_CONNECTION_SUCCESSFUL_COLOR	CRGB::Green
+#define WIFI_CONNECTION_SUCCESSFUL_COLOR	CRGB::Purple
 
 /**
  * \brief Color of the LEDs if system is waiting for WIFI smart config
  */
-#define WIFI_SMART_CONFIG_COLOR				CRGB::Yellow
+#define WIFI_SMART_CONFIG_COLOR				CRGB::Orange
 
 /**
  * \brief Color of the LEDs signaling an error of some sort
@@ -148,7 +148,7 @@
 /**
  * \brief Enter the string for your timezone according to this webpage: https://remotemonitoringsystems.ca/time-zone-abbreviations.php
  */
-#define TIMEZONE_INFO "CET-1CEST-2,M3.5.0/02:00:00,M10.5.0/03:00:00"
+#define TIMEZONE_INFO "EST5EDT"
 
 /**
  * \brief Time in seconds for the interval in which the time should be synchronized with the time server
@@ -196,17 +196,17 @@
 	/**
 	 * \brief Start hour for the night mode
 	 */
-	#define DEFAULT_NIGHT_MODE_START_HOUR 22
+	#define DEFAULT_NIGHT_MODE_START_HOUR 23
 
 	/**
 	 * \brief Start minute for the night mode
 	 */
-	#define DEFAULT_NIGHT_MODE_START_MINUTE 0
+	#define DEFAULT_NIGHT_MODE_START_MINUTE 59
 
 	/**
 	 * \brief End hour for the night mode
 	 */
-	#define DEFAULT_NIGHT_MODE_END_HOUR 7
+	#define DEFAULT_NIGHT_MODE_END_HOUR 6
 
 	/**
 	 * \brief End minute for the night mode
@@ -250,7 +250,7 @@
 /**
  * \brief Number of LEDs For interior lights
  */
-#define ADDITIONAL_LEDS			12
+#define ADDITIONAL_LEDS			35
 
 /**
  * \brief Automatically calculated total number of LEDs used
@@ -376,22 +376,22 @@ enum DisplayIDs {
 	/**
 	 * \brief Time that should pass before the light sensor is read again. Higher number -> slower adjustments but also changes will be more sudden
 	 */
-	#define LIGHT_SENSOR_READ_DELAY		500
+	#define LIGHT_SENSOR_READ_DELAY		200
 
 	/**
 	 * \brief AnalogRead value if the light sensor reads complete darkness
 	 */
-	#define LIGHT_SENSOR_MIN			0
+	#define LIGHT_SENSOR_MIN			3000
 
 	/**
 	 * \brief AnalogRead value if the light sensor reads the brightest
 	 */
-	#define LIGHT_SENSOR_MAX			4095
+	#define LIGHT_SENSOR_MAX			0
 
 	/**
 	 * \brief Value between 0 and 255 that determines how much the light sensor values can influence the led brightness
 	 */
-	#define LIGHT_SENSOR_SENSITIVITY	100
+	#define LIGHT_SENSOR_SENSITIVITY	30
 
 #endif
 
@@ -411,7 +411,7 @@ enum DisplayIDs {
 /**
  * \brief The time it takes for one digit to morph into another
  */
-#define DIGIT_ANIMATION_SPEED 900
+#define DIGIT_ANIMATION_SPEED 300
 
 /**
  * \brief the minimum delay between calls of FastLED.show()

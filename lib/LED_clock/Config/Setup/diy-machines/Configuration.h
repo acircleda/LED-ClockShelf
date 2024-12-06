@@ -250,7 +250,7 @@
 /**
  * \brief Number of LEDs For interior lights
  */
-#define ADDITIONAL_LEDS			35
+#define ADDITIONAL_LEDS			0 /* 35 is original value
 
 /**
  * \brief Automatically calculated total number of LEDs used
